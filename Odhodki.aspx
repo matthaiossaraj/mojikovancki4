@@ -1,0 +1,62 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Odhodki.aspx.cs" Inherits="Money.Odhodki" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <form id="form" runat="server">
+    <div id="odhodki">
+    <h1 class="outMainTitle">Odhodki</h1>
+		<div>
+
+		    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource2">
+                <Columns>
+                    <asp:BoundField DataField="Datum" HeaderText="Datum" SortExpression="Datum" />
+                    <asp:BoundField DataField="Znesek" HeaderText="Znesek" SortExpression="Znesek" />
+                    <asp:BoundField DataField="Kategorija" HeaderText="Kategorija" SortExpression="Kategorija" />
+                    <asp:BoundField DataField="Racun" HeaderText="Racun" SortExpression="Racun" />
+                </Columns>
+                <FooterStyle BackColor="White" ForeColor="#000066" />
+                <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="#000066" HorizontalAlign="Left" />
+                <RowStyle ForeColor="#000066" />
+                <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                <SortedAscendingHeaderStyle BackColor="#007DBB" />
+                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                <SortedDescendingHeaderStyle BackColor="#00547E" />
+            </asp:GridView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:moneyConnectionString %>" ProviderName="<%$ ConnectionStrings:moneyConnectionString.ProviderName %>" SelectCommand="SELECT outcome.amount AS Znesek,outcome.`date` AS Datum, accounts.name AS Racun, categories.name AS Kategorija FROM outcome INNER JOIN accounts ON accounts.id = outcome.account INNER JOIN categories ON categories.id = outcome.category"></asp:SqlDataSource>
+
+		</div>    
+</div>
+    <div id="outcomeAdd" class="dialog">
+    
+        <div>
+            <label for="category" class="catLbl">Kategorija</label>
+            <asp:TextBox id="category" runat="server" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
+                                        ControlToValidate="category"
+                                        Display="Static"
+                                        runat="server"
+                                        ErrorMessage="Vnesite kategorijo" ForeColor="Red">*</asp:RequiredFieldValidator>
+        </div>
+        <div>
+            <label for="date" class="dateLbl">Datum</label>
+            <asp:TextBox id="date" runat="server" />
+        </div>
+        <div>
+            <label for="amount" class="amountLbl">Znesek</label>
+            <asp:TextBox id="amount" runat="server" />
+            <asp:CustomValidator ID="CustomValidator1" runat="server" ForeColor="Red" ErrorMessage="Dovoljene so samo številke"
+    OnServerValidate="Validate_Numeric" ControlToValidate="amount"></asp:CustomValidator>
+        </div>
+        <div>
+	        <label for="account" class="accountLbl">Račun</label>
+	        <asp:TextBox id="account" runat="server" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
+                                        ControlToValidate="account"
+                                        Display="Static"
+                                        runat="server"
+                                        ErrorMessage="Vnesite ime računa" ForeColor="Red">*</asp:RequiredFieldValidator>
+	    </div>
+        <button class="formConf">Potrdi</button>
+</div>
+    </form>
+</asp:Content>

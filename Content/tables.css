@@ -1,0 +1,27 @@
+﻿table {
+    width:100%;
+    border-collapse:collapse;
+    text-align:left;
+}
+table th{
+    padding: 10px 8px;
+    border-bottom:2px solid #bdc3c7;
+}
+table td {
+    border-bottom: 1px dotted #bdc3c7;
+    padding: 6px 8px;
+}
+table td a {
+    color:#000;
+    text-decoration:none;
+}
+table td a:hover {
+    text-decoration:underline;
+    color:gray;
+}
+table tbody tr:hover {
+    color:gray;
+}
+table tr:last-child td{
+    border-bottom:none;
+}
