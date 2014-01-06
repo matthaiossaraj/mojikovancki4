@@ -1,0 +1,79 @@
+﻿form div {
+    padding:10px 0;
+    clear:left;
+}
+form label {
+    float:left;
+    width:150px;
+    padding:7px;
+}
+form input {
+    padding:7px;
+    float:left;
+    width:200px;
+    border:none;
+    box-shadow:2px 2px 5px #bdc3c7 inset;
+}
+form button {
+    border:none;
+    background:#fff;
+    width:440px;
+    height:40px;
+    font-size:100%;
+}
+form button:hover {
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#userData fieldset {
+    background:#fff;
+    border:none;
+    margin-bottom:20px;
+    width:400px;
+    padding:20px;
+}
+#userData legend {
+    background:#fff;
+    border:1px solid #ecf0f1;
+    padding:10px;
+}
+
+
+.dialog {
+    position:absolute;
+    top:50px;
+    right:50px;
+    width:400px;
+    box-shadow:2px 2px 5px #bdc3c7;
+    background:#fff;
+    padding:20px;
+    border:1px solid #ecf0f1;
+;
+    background:
+}
+.dialog button{
+    border:none;
+    background:#ecf0f1;
+    width:380px;
+    height:40px;
+    margin:10px auto;
+    font-size:100%;
+}
+
+span.err {
+    font-size:0.8em;
+    color:#d35400;
+    clear:left;
+}
+
+#prijava_sub {
+    width:380px;
+}
+#prijava_form {
+    width:400px;
+    margin:50px auto;
+}
+#prijava_form input[name=remember] {
+    box-shadow:none;
+}

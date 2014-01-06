@@ -1,0 +1,42 @@
+﻿nav{
+    float:left;
+}
+#headerMenu{
+    margin-left:20px;
+}
+#headerMenu li{
+    float:left;
+    margin-right:20px;
+}
+#headerMenu li a{
+    text-decoration:none;
+    color:#fff;
+}
+#headerMenu li a:hover{
+    text-decoration:underline;
+}
+.sideMenu {
+    width:200px;
+}
+.sideMenu li{
+    border-bottom:1px solid #5BB0E9;
+    padding:10px 20px 10px 30px;
+}
+.sideMenu li a{
+    color:#fff;
+}
+.sideMenu li a:hover{
+    color:#fff;
+}
+#logo {
+    margin-top:5px;
+}
+#sideBar nav h3 {
+    background:#2073aa;
+    width:200px;
+    padding:10px 0;
+    margin-bottom:10px;
+}
+#panelIcon:hover {
+    cursor:pointer;
+}
