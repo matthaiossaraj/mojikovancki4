@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#btnConvert').click(function () {
+    /*$('#btnConvert').click(function () {
         var amount = $('#txtAmount').val();
         var from = $('#ddlfrom').val();
         var to = $('#ddlto').val();
@@ -12,7 +12,7 @@ $(document).ready(function () {
                 $('#currency_converter_result').html(data.d);
             }
         });
-    });
+    });*/
 
     $('#controls').hide();
     translate();
