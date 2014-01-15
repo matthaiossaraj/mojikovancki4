@@ -31,15 +31,11 @@
         <div id="pageWrapper">
 	    <div id="sideBar" data-visible="false">
 		<div id="userAccount">
-		    <a href="uporabnik.html"><img alt="user icon" src="images/user_icon.png"/></a>
+		    <a href=""><img alt="user icon" src="images/user_icon.png"/>Matej Milošević</a>
 		</div>
-            <nav>
-
-            </nav>
+            
+    <nav></nav>
 		
-		<div id="settings">
-		    <a href="nastavitve.html"><img alt="settings icon" src="images/settings_icon.png"/></a>
-		</div>
 	    </div>
 	    <div id="wrapper">
 		<div id="header">

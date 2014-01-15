@@ -4,14 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 namespace Money
 {
     public partial class SiteMaster : System.Web.UI.MasterPage
     {
+        private MySqlConnection connection;
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }

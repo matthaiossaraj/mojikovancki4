@@ -62,12 +62,41 @@
     <Content Include="Odhodki.aspx" />
     <Content Include="Prihodki.aspx" />
     <Content Include="Racuni.aspx" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\canvasDraw.js" />
+    <Content Include="Scripts\formHandler.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\loader.js" />
+    <Content Include="Scripts\userControl.js" />
+    <Content Include="Scripts\userInterface.js" />
+    <Content Include="Scripts\xmlRead.js" />
+    <Content Include="Styles\cupertino\images\animated-overlay.gif" />
+    <Content Include="Styles\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Styles\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\cupertino\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Styles\cupertino\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Styles\form.css" />
+    <Content Include="Styles\lists.css" />
+    <Content Include="Styles\menus.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\tables.css" />
+    <Content Include="Styles\template.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -75,6 +104,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebService.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\ChangePassword.aspx.cs">
@@ -150,6 +180,10 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

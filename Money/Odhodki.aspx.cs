@@ -30,13 +30,35 @@ namespace Money
 
                 if (result)
                 {
+                    /*string query = "SELECT id FROM categories WHERE name = " + categoryname;
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                    dataReader.Read();
+                    int columnIndex = dataReader.GetOrdinal("id");
+                    int category_id = dataReader.GetInt32(columnIndex);
+
+                    dataReader.Close();
+
+                    query = "SELECT id FROM accounts WHERE name = " + acc;
+
+                    cmd = new MySqlCommand(query, connection);
+                    dataReader = cmd.ExecuteReader();
+
+                    dataReader.Read();
+                    columnIndex = dataReader.GetOrdinal("id");
+                    int account_id = dataReader.GetInt32(columnIndex);
+
+                    dataReader.Close();*/
+
                     string write = "INSERT INTO outcome (amount, category, date, account) VALUES (@amount, @category, @date, @account)";
 
                     MySqlCommand cmd2 = new MySqlCommand(write, connection);
                     cmd2.Parameters.AddWithValue("@amount", balance);
-                    cmd2.Parameters.AddWithValue("@category", categoryname);
+                    cmd2.Parameters.AddWithValue("@category", 1);
                     cmd2.Parameters.AddWithValue("@date", datev);
-                    cmd2.Parameters.AddWithValue("@account", acc);
+                    cmd2.Parameters.AddWithValue("@account", 1);
                     cmd2.ExecuteNonQuery();
                 }
             }

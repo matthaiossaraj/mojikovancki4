@@ -8,11 +8,10 @@ $(document).ready(function(){
     });
     
     var availableTags = [
-      "hrana",
-      "pijača",
-      "prevoz",
-      "stanovanje",
-      "zabava",
+      "Hrana",
+      "Prodaja",
+      "Programiranje",
+      "Stanovanje",
     ];
     $('#container').on('focus', 'input[name=category]', function(){
 	$(this).autocomplete({

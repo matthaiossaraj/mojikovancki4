@@ -8,6 +8,7 @@
 	<h4 class="netoStanje">Neto stanje
         </h4>
 	<ul>
+    
 	    <li><span class="sredstva">Sredstva</span><div class="stateChange"><span><asp:Label ID="sredstvaVal" runat="server" /> €</span></div></li>
 	    <li><span class="dolgovi">Dolgovi</span><div class="stateChange"><span><asp:Label ID="dolgoviVal" runat="server" /> €</span></div></li>
 	    <li><span class="netWorth">Neto</span><div class="stateChange"><span><asp:Label ID="netoVal" runat="server" /> €</span></div></li>
