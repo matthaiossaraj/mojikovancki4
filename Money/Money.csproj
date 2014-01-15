@@ -58,6 +58,16 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="images\down_icon.png" />
+    <Content Include="images\gb_icon.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\menuPanel_icon.png" />
+    <Content Include="images\plus_icon.png" />
+    <Content Include="images\settings_icon.png" />
+    <Content Include="images\sl_icon.png" />
+    <Content Include="images\up_icon.png" />
+    <Content Include="images\user_icon.png" />
+    <Content Include="images\x_icon.png" />
     <Content Include="Kategorije.aspx" />
     <Content Include="Odhodki.aspx" />
     <Content Include="Prihodki.aspx" />
