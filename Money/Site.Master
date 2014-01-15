@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moji kovančki</title>
 
-    <link rel="stylesheet" type="text/css" href="Content/tables.css" />
-	<link rel="stylesheet" type="text/css" href="Content/lists.css" />
-	<link rel="stylesheet" type="text/css" href="Content/menus.css" />
-	<link rel="stylesheet" type="text/css" href="Content/template.css" />
-	<link rel="stylesheet" type="text/css" href="Content/form.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/tables.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/lists.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/menus.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/template.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/form.css" />
 
     <link rel="stylesheet" type="text/css" href="Content/cupertino/jquery-ui-1.10.3.custom.css" />
 	
