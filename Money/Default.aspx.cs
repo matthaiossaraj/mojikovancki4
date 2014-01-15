@@ -5,30 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
-using System.Web.Services;
-using System.Net;
-using System.IO;
-using System.Text.RegularExpressions;
-using Money.CurrencyConverter;
 
 namespace Money
 {
-    public partial class _Default : Page
+    public partial class _Default : System.Web.UI.Page
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         protected void Page_Load(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "money";
-            uid = "root";
-            password = "";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            connectionString = "server=57c4cf97-8eac-4264-93a0-a2b30118bd31.mysql.sequelizer.com;database=db57c4cf978eac426493a0a2b30118bd31;uid=zlzvudsglculkmzm;pwd=rBKMJ5F8Q6UeUVb8QYjgWUNbZJe5LMEeJSKXMXMa45jZuNBPeWTHtWPEWHUaZJvc";
 
             connection = new MySqlConnection(connectionString);
 
@@ -42,7 +28,7 @@ namespace Money
             reader.Close();
 
             string query = "SELECT SUM(balance) AS sredstva FROM accounts WHERE positive = 1";
-            
+
             MySqlCommand cmd = new MySqlCommand(query, connection);
             MySqlDataReader dataReader = cmd.ExecuteReader();
 
@@ -87,28 +73,30 @@ namespace Money
                 int columnIndex5 = dataReader.GetOrdinal("name");
                 string name = dataReader.GetString(columnIndex5);
 
-               racuniList.InnerHtml += @"<li><a href=''>";
-               racuniList.InnerHtml += name;
-               racuniList.InnerHtml += @"</a><div class='stateChange'><span>";
-               racuniList.InnerHtml += balance.ToString("F2");
-               racuniList.InnerHtml += @" €</span>";
-		       if(balance >= last) {
-                   racuniList.InnerHtml += @"<img alt='arrow' src='images/up_icon.png' />";
-               }
-               else
-               {
-                   racuniList.InnerHtml += @"<img alt='arrow' src='images/down_icon.png' />";
-               }
-                if(balance >= last) {
+                racuniList.InnerHtml += @"<li><a href=''>";
+                racuniList.InnerHtml += name;
+                racuniList.InnerHtml += @"</a><div class='stateChange'><span>";
+                racuniList.InnerHtml += balance.ToString("F2");
+                racuniList.InnerHtml += @" €</span>";
+                if (balance >= last)
+                {
+                    racuniList.InnerHtml += @"<img alt='arrow' src='images/up_icon.png' />";
+                }
+                else
+                {
+                    racuniList.InnerHtml += @"<img alt='arrow' src='images/down_icon.png' />";
+                }
+                if (balance >= last)
+                {
                     racuniList.InnerHtml += @"<span class='upP'> ";
                 }
                 else
                 {
                     racuniList.InnerHtml += @"<span class='dwP'> ";
                 }
-                double perc = Math.Abs(balance-last)/last*100;
+                double perc = Math.Abs(balance - last) / last * 100;
                 racuniList.InnerHtml += perc.ToString("F2");
-		        racuniList.InnerHtml += @"%</span></div></li>";
+                racuniList.InnerHtml += @"%</span></div></li>";
             }
             dataReader.Close();
 
@@ -138,25 +126,6 @@ namespace Money
             this.budgetU.Text = used.ToString("F2");
 
             connection.Close();
-
-            if(!IsPostBack)
-            {
-                CurrencyConverter.Currency cur = new CurrencyConverter.Currency();
-                Array arr;
-                arr = System.Enum.GetValues(cur.GetType());
-                drpFromCurrency.DataSource = arr;
-                drpFromCurrency.DataBind();
-                drpToCurrency.DataSource = arr;
-                drpToCurrency.DataBind();
-            }
-        }
-        protected void Convert_Click(object sender, EventArgs e)
-        {
-            //CurrencyConverter.CurrencyConvertor obj = new CurrencyConverter.CurrencyConvertor();
-            //CurrencyConverter.Currency Currency = new CurrencyConverter.Currency();
-            //double dt = new double();
-            //dt = obj.ConversionRate((CurrencyConverter.Currency)System.Enum.Parse(Currency.GetType(), drpFromCurrency.Text), (CurrencyConverter.Currency)System.Enum.Parse(Currency.GetType(), drpToCurrency.Text));
-            //TextBoxRes.Text = Convert.ToString(dt * Convert.ToDouble(TextBoxRes.Text));
         }
     }
 }

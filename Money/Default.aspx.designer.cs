@@ -85,39 +85,12 @@ namespace Money {
         protected global::System.Web.UI.WebControls.GridView transakcije;
         
         /// <summary>
-        /// TextBoxRes control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxRes;
-        
-        /// <summary>
-        /// drpFromCurrency control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpFromCurrency;
-        
-        /// <summary>
-        /// drpToCurrency control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpToCurrency;
-        
-        /// <summary>
-        /// btnConvert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConvert;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

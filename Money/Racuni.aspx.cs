@@ -6,25 +6,15 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
-
 namespace Money
 {
     public partial class Racuni : System.Web.UI.Page
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         protected void Page_Load(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "money";
-            uid = "root";
-            password = "";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            connectionString = "server=57c4cf97-8eac-4264-93a0-a2b30118bd31.mysql.sequelizer.com;database=db57c4cf978eac426493a0a2b30118bd31;uid=zlzvudsglculkmzm;pwd=rBKMJ5F8Q6UeUVb8QYjgWUNbZJe5LMEeJSKXMXMa45jZuNBPeWTHtWPEWHUaZJvc";
 
             connection = new MySqlConnection(connectionString);
 
@@ -61,7 +51,8 @@ namespace Money
 
             racuniLoadDash.InnerHtml = @"<ul class='listWithBudget'>";
 
-            while(dataReader.Read()) {
+            while (dataReader.Read())
+            {
                 double limitNew;
 
                 int columnIndex = dataReader.GetOrdinal("positive");
@@ -79,18 +70,24 @@ namespace Money
                 int columnIndex5 = dataReader.GetOrdinal("name");
                 string name = dataReader.GetString(columnIndex5);
 
-                if(positive == 1) {
-	            if(positive >= 0) {
-	                if(balance > goal){
-		            limitNew = goal * 1.5;
-	                }
-	                else
-		            limitNew = goal;
-	            }
-	            else {
-	                limitNew = limit;
-	            }
-                } else {
+                if (positive == 1)
+                {
+                    if (positive >= 0)
+                    {
+                        if (balance > goal)
+                        {
+                            limitNew = goal * 1.5;
+                        }
+                        else
+                            limitNew = goal;
+                    }
+                    else
+                    {
+                        limitNew = limit;
+                    }
+                }
+                else
+                {
                     limitNew = limit;
                 }
 

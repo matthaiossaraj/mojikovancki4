@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head runat="server">
+<head id="Head1" runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Moji kovančki</title>
@@ -47,10 +47,10 @@
 		    <nav>
 			<ul class="menu" id="headerMenu">
 			    <li><a href="."><img alt="logo" src="images/logo.png" id="logo"/></a></li>
-                <li><a runat="server" href="~/Racuni" class="headerMenuAcc">Računi</a></li>
-			    <li><a runat="server" href="~/Prihodki" class="headerMenuInc">Prihodki</a></li>
-			    <li><a runat="server" href="~/Odhodki" class="headerMenuOut">Odhodki</a></li>
-			    <li><a runat="server" href="~/Kategorije" class="headerMenuCat">Kategorije</a></li>
+                <li><a id="A1" runat="server" href="~/Racuni.aspx" class="headerMenuAcc">Računi</a></li>
+			    <li><a id="A2" runat="server" href="~/Prihodki.aspx" class="headerMenuInc">Prihodki</a></li>
+			    <li><a id="A3" runat="server" href="~/Odhodki.aspx" class="headerMenuOut">Odhodki</a></li>
+			    <li><a id="A4" runat="server" href="~/Kategorije.aspx" class="headerMenuCat">Kategorije</a></li>
 			</ul>
 		    </nav>
 		    <div id="controls">
@@ -69,4 +69,3 @@
 	</div>
 </body>
 </html>
-

@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Racuni.aspx.cs" Inherits="Money.Racuni" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="racuniLoadDash" runat="server"></div>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<div id="racuniLoadDash" runat="server"></div>
     <div id="accountAdd" class="dialog">
-    <form runat="server">
+    <form id="Form1" runat="server">
         <div>
             <label for="name" class="accName">Ime računa</label>
             <asp:TextBox id="name" runat="server" />
@@ -27,4 +27,4 @@
         <button class="formConf">Potrdi</button>
     </form>
 </div>
-    </asp:Content>
+</asp:Content>

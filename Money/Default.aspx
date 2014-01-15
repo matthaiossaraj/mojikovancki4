@@ -1,10 +1,8 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Money._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs" Inherits="Money._Default" %>
 
-
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    
-<div id="dashBoard">
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <div id="dashBoard">
     
     <div id="dash_netWorth" class="dashBox">
 	<h4 class="netoStanje">Neto stanje
@@ -36,15 +34,9 @@
 	<h4 class="transListTitle">Zadnje transakcije</h4>
         <form id="form" runat="server">
 		<asp:GridView ID="transakcije" runat="server">
-        </asp:GridView>
-        <asp:TextBox runat="server" ID="TextBoxRes"></asp:TextBox>
-        <asp:DropDownList runat="server" ID="drpFromCurrency"></asp:DropDownList>
-        <asp:DropDownList runat="server" ID="drpToCurrency"></asp:DropDownList>
-        <asp:Button runat="server" ID="btnConvert" Text="Convert" OnClick="Convert_Click" />   
+        </asp:GridView>  
            </form>  
     </div>
     <div class="clear"></div> 
 </div>
-       
 </asp:Content>
-    

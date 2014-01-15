@@ -1,16 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Odhodki.aspx.cs" Inherits="Money.Odhodki" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <form id="form" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<form id="form" runat="server">
     <div id="odhodki">
     <h1 class="outMainTitle">Odhodki</h1>
 		<div>
 
 		    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="SqlDataSource2">
                 <Columns>
+                    <asp:BoundField DataField="Znesek" HeaderText="Znesek" 
+                        SortExpression="Znesek" />
                     <asp:BoundField DataField="Datum" HeaderText="Datum" SortExpression="Datum" />
-                    <asp:BoundField DataField="Znesek" HeaderText="Znesek" SortExpression="Znesek" />
-                    <asp:BoundField DataField="Kategorija" HeaderText="Kategorija" SortExpression="Kategorija" />
                     <asp:BoundField DataField="Racun" HeaderText="Racun" SortExpression="Racun" />
+                    <asp:BoundField DataField="Kategorija" HeaderText="Kategorija" 
+                        SortExpression="Kategorija" />
                 </Columns>
                 <FooterStyle BackColor="White" ForeColor="#000066" />
                 <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -22,7 +24,10 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:moneyConnectionString %>" ProviderName="<%$ ConnectionStrings:moneyConnectionString.ProviderName %>" SelectCommand="SELECT outcome.amount AS Znesek,outcome.`date` AS Datum, accounts.name AS Racun, categories.name AS Kategorija FROM outcome INNER JOIN accounts ON accounts.id = outcome.account INNER JOIN categories ON categories.id = outcome.category"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:db57c4cf978eac426493a0a2b30118bd31ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:db57c4cf978eac426493a0a2b30118bd31ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT outcome.amount AS Znesek,outcome.`date` AS Datum, accounts.name AS Racun, categories.name AS Kategorija FROM outcome INNER JOIN accounts ON accounts.id = outcome.account INNER JOIN categories ON categories.id = outcome.category"></asp:SqlDataSource>
 
 		</div>    
 </div>

@@ -11,19 +11,10 @@ namespace Money
     public partial class Kategorije : System.Web.UI.Page
     {
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
         protected void Page_Load(object sender, EventArgs e)
         {
-            server = "localhost";
-            database = "money";
-            uid = "root";
-            password = "";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            connectionString = "server=57c4cf97-8eac-4264-93a0-a2b30118bd31.mysql.sequelizer.com;database=db57c4cf978eac426493a0a2b30118bd31;uid=zlzvudsglculkmzm;pwd=rBKMJ5F8Q6UeUVb8QYjgWUNbZJe5LMEeJSKXMXMa45jZuNBPeWTHtWPEWHUaZJvc";
 
             connection = new MySqlConnection(connectionString);
 
