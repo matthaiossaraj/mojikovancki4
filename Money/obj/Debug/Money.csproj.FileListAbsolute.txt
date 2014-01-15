@@ -3,3 +3,8 @@ C:\Users\Matthaios\Dropbox\Fakultet\SP\vjezbe\moji4\Money\bin\Money.pdb
 C:\Users\Matthaios\Dropbox\Fakultet\SP\vjezbe\moji4\Money\obj\Debug\Money.csprojResolveAssemblyReference.cache
 C:\Users\Matthaios\Dropbox\Fakultet\SP\vjezbe\moji4\Money\obj\Debug\Money.dll
 C:\Users\Matthaios\Dropbox\Fakultet\SP\vjezbe\moji4\Money\obj\Debug\Money.pdb
+C:\Users\Matthaios\Dropbox\Fakultet\SP\mojikovancki4\Money\bin\Money.dll
+C:\Users\Matthaios\Dropbox\Fakultet\SP\mojikovancki4\Money\bin\Money.pdb
+C:\Users\Matthaios\Dropbox\Fakultet\SP\mojikovancki4\Money\obj\Debug\Money.csprojResolveAssemblyReference.cache
+C:\Users\Matthaios\Dropbox\Fakultet\SP\mojikovancki4\Money\obj\Debug\Money.dll
+C:\Users\Matthaios\Dropbox\Fakultet\SP\mojikovancki4\Money\obj\Debug\Money.pdb
